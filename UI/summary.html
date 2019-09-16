@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>summary page</title>
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/summary.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="managemeal.html">Manage meals</a>
+        <a href="dashboard.html">dashboard</a>
+        <a class="icon" onclick="navToggle()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="right">
+            <a href="index.html">Logout</a>
+        </div>
+    </div>
+<main>
+    <section class="summary-container">
+        <!-- Tab links -->
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'all_order')">All Orders</button>
+            <button class="tablinks" onclick="openCity(event, 'today_order')">Today's Order</button>
+            <button class="tablinks" onclick="openCity(event, 'summary')">Summary</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="all_order" class="tabcontent">
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item</th>
+                    <th>Date</th>
+                    <th>Quantity</th>
+                    <th class="">Subtotal</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr class="tr-hover">
+                    <td>Peter</td>
+                    <td>Beans and dodo</td>
+                    <td><input type="text" class="input-quantity" value="09/02/2019" disabled></td>
+                    <td>
+                        <input type="number" class="input-quantity" value="4" disabled>
+                    </td>
+                    <td>
+                        1000
+                    </td>
+                    <td>Canceled</td>
+                    <td>
+                        <i class="fa fa-eye"></i>
+                    </td>
+                </tr>
+                <tr class="tr-hover">
+                    <td>Doyin</td>
+                    <td>Beans and yam</td>
+                    <td><input type="text" class="input-quantity" value="09/02/2019" disabled></td>
+                    <td>
+                        <input type="number" class="input-quantity" value="4" disabled>
+                    </td>
+                    <td>
+                        1000
+                    </td>
+                    <td>Delivered</td>
+                    <td>
+                        <i class="fa fa-eye"></i>
+                    </td>
+                </tr>
+                <tr class="tr-hover">
+                    <td>Bola</td>
+                    <td>Rice and dodo</td>
+                    <td><input type="text" class="input-quantity" value="09/02/2019" disabled></td>
+                    <td>
+                        <input type="number" class="input-quantity" value="4" disabled>
+                    </td>
+                    <td>
+                        1000
+                    </td>
+                    <td>Delivered</td>
+                    <td>
+                        <i class="fa fa-eye"></i>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="4"></td>
+                    <!--<td><a href="" class="btn-checkout">Print</a></td>-->
+                    <td><strong>Total N3000.00</strong></td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div id="today_order" class="tabcontent">
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item</th>
+                    <th>Date</th>
+                    <th>Quantity</th>
+                    <th class="">Subtotal</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr class="tr-hover">
+                    <td>Peter</td>
+                    <td>Beans and dodo</td>
+                    <td><input type="text" class="input-quantity" value="09/02/2019" disabled></td>
+                    <td>
+                        <input type="number" class="input-quantity" value="4" disabled>
+                    </td>
+                    <td>
+                        1000
+                    </td>
+                    <td>accepted</td>
+                    <td>
+                        <i class="fa fa-eye"></i>
+                    </td>
+                </tr>
+                <tr class="tr-hover">
+                    <td>Doyin</td>
+                    <td>Beans and yam</td>
+                    <td><input type="text" class="input-quantity" value="09/02/2019" disabled></td>
+                    <td>
+                        <input type="number" class="input-quantity" value="4" disabled>
+                    </td>
+                    <td>
+                        1000
+                    </td>
+                    <td>accepted</td>
+                    <td>
+                        <i class="fa fa-eye"></i>
+                    </td>
+                </tr>
+                <tr class="tr-hover">
+                    <td>Bola</td>
+                    <td>Rice and dodo</td>
+                    <td><input type="text" class="input-quantity" value="09/02/2019" disabled></td>
+                    <td>
+                        <input type="number" class="input-quantity" value="4" disabled>
+                    </td>
+                    <td>
+                        1000
+                    </td>
+                    <td>Pending</td>
+                    <td>
+                        <div><button id="edit-meal" class="edit-meal">Edit</button><i class="fa fa-eye"></i></div>           
+                        
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="4"></td>
+                    <!--<td><a href="" class="btn-checkout">Print</a></td>-->
+                    <td><strong>Total N3000.00</strong></td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div id="summary" class="tabcontent">
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Item</th>
+                    <th>Date</th>
+                    <th>Quantity</th>
+                    <th class="">Subtotal</th>
+                    <th></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr class="tr-hover">
+                    <td>Peter</td>
+                    <td>Beans and dodo</td>
+                    <td><input type="text" class="input-quantity" value="09/02/2019" disabled></td>
+                    <td>
+                        <input type="number" class="input-quantity" value="4" disabled>
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        <i class="fa fa-eye"></i>
+                    </td>
+                </tr>
+                <tr class="tr-hover">
+                    <td>Doyin</td>
+                    <td>Beans and yam</td>
+                    <td><input type="text" class="input-quantity" value="09/02/2019" disabled></td>
+                    <td>
+                        <input type="number" class="input-quantity" value="4" disabled>
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        <i class="fa fa-eye"></i>
+                    </td>
+                </tr>
+                <tr class="tr-hover">
+                    <td>Bola</td>
+                    <td>Rice and dodo</td>
+                    <td><input type="text" class="input-quantity" value="09/02/2019" disabled></td>
+                    <td>
+                        <input type="number" class="input-quantity" value="4" disabled>
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        <i class="fa fa-eye"></i>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="4"></td>
+                    <!--<td><a href="" class="btn-checkout">Print</a></td>-->
+                    <td><strong>Total N300.00</strong></td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+</main>
+<div class="modal" id="myModal">
+        <div class="container modal-content">
+                <span class="close">&times;</span>
+            <form action="/action_page.php" class="form">   
+              <div class="container">
+                  <p>Change Status.</p>
+                  <hr>
+                <div>
+                    <!-- <label for="status"><b>Select</b></label> -->
+                    <input type="radio" name="status" value="Pending"> Pending <br>
+                    <input type="radio" name="status" value="Accepted"> Accepted
+                </div>             
+        
+                  <div class="clearfix">
+                      <button type="submit" class="signupbtn confirm">Confirm</button>
+                  </div>
+              </div>
+            </form>
+        </div>    
+    </div>
+
+
+<script src="js/navbar.js"></script>
+<script src="js/summary.js"></script>  
+
+</body>
+</html>

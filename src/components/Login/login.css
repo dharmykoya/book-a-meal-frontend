@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.textOrange {
+  color: #dd4f05;
+}
+
+.Message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.LoginHeader {
+  color: #9f8181;
+  text-align: center;
+}
+
+
+
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+
+@media (min-width: 601px) and (max-width: 968px) {
+    
+}
+
